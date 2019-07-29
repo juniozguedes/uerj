@@ -55,7 +55,32 @@ class PostsController extends Controller
         $this->validate($request,[
             'title' => 'required',
             'body' => 'required',
+            'filename' => 'nullable'
             ]);
+
+        //File
+
+        if($request->hasFile('filename')){
+            //Get filename with the extension
+            $filenameWithExt = $request->file('filename')->getClientOriginalName();
+
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //Get just ext
+            $extension = $request->file('filename')->getClientOriginalExtension();
+
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+            //Upload Image
+            $path = $request->file('filename')->storeAs('public/files', $fileNameToStore);
+
+        } else {
+            $fileNameToStore = 'none';
+        }
+
+
 
         //Create Post
 
@@ -63,6 +88,7 @@ class PostsController extends Controller
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
+        $post->filename = $fileNameToStore;
         $post->save();
 
         return redirect('/posts')->with('sucess','Post Created');
