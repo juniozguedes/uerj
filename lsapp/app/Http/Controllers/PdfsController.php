@@ -39,7 +39,8 @@ class PdfsController extends Controller
      */
     public function create()
     {
-        return view('pdfs.create');
+        $title = 'none';
+        return view('pdfs.create')->with('title',$title);
         
     }
 

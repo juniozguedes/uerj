@@ -29,8 +29,9 @@ class PostsController extends Controller
         //$post = Post::where('title','Post Two')->get();
         //$posts = DB::select('SELECT * FROM posts');
         //$posts = Post::orderBy('title','desc')->take(1)->get();
-        $posts = Post::orderBy('created_at','desc')->paginate(8);
-        return view('posts.index')->with('posts', $posts);
+        $posts = Post::orderBy('created_at','desc')->paginate(6);
+        $title = 'none';
+        return view('posts.index')->with('posts', $posts)->with('title',$title);
     }
 
     /**
@@ -40,7 +41,8 @@ class PostsController extends Controller
      */
     public function create()
     {
-        return view('posts.create');
+        $title = 'none';
+        return view('posts.create')->with('title',$title);
         
     }
 
@@ -90,8 +92,9 @@ class PostsController extends Controller
         $post->user_id = auth()->user()->id;
         $post->filename = $fileNameToStore;
         $post->save();
+        $title = 'none';
 
-        return redirect('/posts')->with('sucess','Post Created');
+        return redirect('/posts')->with('sucess','Post Created')->with('title',$title);
     }
 
     /**
@@ -109,7 +112,8 @@ class PostsController extends Controller
             ];*/
         $post = Post::find($id);
         $uid = Auth::id();
-        return view('posts.show')->with('post', $post)->with('uid',$uid);
+        $title = 'none';
+        return view('posts.show')->with('post', $post)->with('uid',$uid)->with('title',$title);
 
 
     }

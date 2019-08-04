@@ -28,9 +28,29 @@ Route::get('/about', function(){
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/about', 'PagesController@about');
+Route::get('/programa', 'PagesController@programa');
 
-Route::get('/services', 'PagesController@services');
+Route::get('/docente', 'PagesController@docente');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/alunos', 'PagesController@alunos');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
+
+Route::get('/pesquisa', 'PagesController@pesquisa');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();

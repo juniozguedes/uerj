@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use App\Post;
 use App\Pdf;
 
 class DashboardController extends Controller
@@ -28,6 +29,7 @@ class DashboardController extends Controller
         $user_id = auth()->user()->id;
         $user = User::find($user_id);
 
+        $posts = Post::orderBy('created_at','desc')->paginate(5);
         $pdfs = Pdf::orderBy('created_at','desc')->paginate(5);
 
 
@@ -38,7 +40,9 @@ class DashboardController extends Controller
         $user_id = auth()->user()->id;
         $user = User::find($user_id)->posts()->paginate(10);*/
 
+        $title = 'none';
 
-        return view('dashboard')->with('posts',$user->posts)->with('pdfs',$pdfs); //Check model User! The function posts inside the model return the posts that belongs to this user
+        //return view('dashboard')->with('posts',$user->$posts)->with('pdfs',$pdfs)->with('title',$title); //Check model User! The function posts inside the model return the posts that belongs to this user
+        return view('dashboard')->with('posts',$posts)->with('pdfs',$pdfs)->with('title',$title); //Check model User! The function posts inside the model return the posts that belongs to this user
     }
 }

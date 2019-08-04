@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Dashboard</div>
+                <div class="card-header"></div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -33,6 +33,7 @@
                                     {{Form::submit('Deletar postagem',['class' => 'btn btn-danger'])}}
                                 {!!Form::close() !!}
                             @endforeach
+                            {{$posts->links()}}
                             @else
                             <p>you have no posts</p>
                             @endif
@@ -69,6 +70,7 @@
                             </div>
                                 <td>
                             @endforeach
+                              {{$posts->links()}}
                             @else
                             <p>you have no pdfs</p>
                             @endif
