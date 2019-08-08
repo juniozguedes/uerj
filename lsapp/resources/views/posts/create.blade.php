@@ -9,8 +9,13 @@
 		{{Form::textarea('body', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Corpo'])}}
 	</div>
 	<div class="form-group">
+		{{Form::text('tag','',['class'=>'form-control', 'placeholder' => 'Tag para a postagem'])}}
+	</div>
+
+	<div class="form-group">
 		{{Form::file('filename')}}
 	</div>
+
 	{{Form::submit('Submit',['class'=>'btn btn-primary'])}}
 {!! Form::close() !!}
 	

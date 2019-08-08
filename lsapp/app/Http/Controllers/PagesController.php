@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Post;
+use App\User;
+use DB;
 
 class PagesController extends Controller
 {
@@ -37,7 +39,9 @@ class PagesController extends Controller
 
     public function alunos(){
         $title ='alunos';
-        return view('pages.alunos')->with('title',$title);
+
+        $posts = Post::where('tag','alunos')->get();
+        return view('pages.alunos')->with('title',$title)->with('posts',$posts);
     }
 
 

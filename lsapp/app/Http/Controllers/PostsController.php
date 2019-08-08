@@ -57,7 +57,8 @@ class PostsController extends Controller
         $this->validate($request,[
             'title' => 'required',
             'body' => 'required',
-            'filename' => 'nullable'
+            'filename' => 'nullable',
+            'tag' => 'nullable'
             ]);
 
         //File
@@ -82,11 +83,13 @@ class PostsController extends Controller
             $fileNameToStore = 'none';
         }
 
-
-
-        //Create Post
-
+        //Check for tag and Create Post
         $post = new Post;
+
+        if ($request->input('tag') !== null) {
+            $post->tag = $request->input('tag');
+        }   
+
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
@@ -131,7 +134,9 @@ class PostsController extends Controller
         if ($uid !== $post->user_id){
             return redirect('/dashboard');    
         }
-        return view('posts.edit')->with('post', $post);
+
+        $title = 'none';
+        return view('posts.edit')->with('post', $post)->with('title',$title);
     }
 
     /**
@@ -148,14 +153,44 @@ class PostsController extends Controller
             'body' => 'required',
             ]);
 
-        //Create Post
 
+        //File
+
+        if($request->hasFile('filename')){
+            //Get filename with the extension
+            $filenameWithExt = $request->file('filename')->getClientOriginalName();
+
+            //Get just filename
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+
+            //Get just ext
+            $extension = $request->file('filename')->getClientOriginalExtension();
+
+            //Filename to store
+            $fileNameToStore = $filename.'_'.time().'.'.$extension;
+
+            //Upload Image
+            $path = $request->file('filename')->storeAs('public/files', $fileNameToStore);
+
+        } else {
+            $fileNameToStore = 'none';
+        }
+
+        //Check for tag and Create Post
         $post = Post::find($id);
+
+        if ($request->input('tag') !== null) {
+            $post->tag = $request->input('tag');
+        }   
+
         $post->title = $request->input('title');
         $post->body = $request->input('body');
+        $post->user_id = auth()->user()->id;
+        $post->filename = $fileNameToStore;
         $post->save();
+        $title = 'none';
 
-        return redirect('/posts')->with('sucess','Postagem Atualizada!');
+        return redirect('/posts')->with('sucess','Postagem Atualizada!')->with('title',$title);
 
         return "ok";
     }
@@ -173,7 +208,7 @@ class PostsController extends Controller
             return redirect('/dashboard');    
         }
         $post->delete();        
-        return redirect('/posts')->with('sucess','Postagem Deletada!');
+        return redirect('/dashboard')->with('sucess','Postagem Deletada!');
 
     }
 }

@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('content')    
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('images/IMG-20190126-WA0053.jpg');">
-      <div class="overlay"></div>
-      <div class="container">
-        <div class="row no-gutters slider-text align-items-center justify-content-center">
-          <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-2 bread">Linhas de Pesquisa</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Linhas de Pesquisa <i class="ion-ios-arrow-forward"></i></span></p>
-          </div>
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/IMG-20190126-WA0053.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-center justify-content-center">
+        <div class="col-md-9 ftco-animate text-center">
+          <h1 class="mb-2 bread">Linhas de Pesquisa</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Linhas de Pesquisa <i class="ion-ios-arrow-forward"></i></span></p>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
  <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/rj_bg.jpg);" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -127,7 +127,7 @@ Relações inter e intrageracionais e produção de cuidado. Violência, gênero
 
 
 
-          <p><a href="index.html" class="btn btn-primary px-4 py-3 mt-3">VOLTAR</a></p>
+          <p><a href="/" class="btn btn-primary px-4 py-3 mt-3">VOLTAR</a></p>
 
               </div>
           </div>  
