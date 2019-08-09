@@ -26,10 +26,10 @@ class PostsController extends Controller
     {
         //$posts = Post::all();
         //$posts = Post::orderBy('title','asc')->get();
-        //$post = Post::where('title','Post Two')->get();
-        //$posts = DB::select('SELECT * FROM posts');
+        $posts = Post::where('tag','none')->paginate(6);
+        //$posts = DB::select("SELECT * FROM posts WHERE tag = 'none';")->paginate(6);
         //$posts = Post::orderBy('title','desc')->take(1)->get();
-        $posts = Post::orderBy('created_at','desc')->paginate(6);
+        //$posts = Post::orderBy('created_at','desc')->paginate(6);
         $title = 'none';
         return view('posts.index')->with('posts', $posts)->with('title',$title);
     }

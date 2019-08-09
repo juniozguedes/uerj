@@ -154,7 +154,7 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active"><a href="{{ url('/') }}" class="nav-link pl-0">Home</a></li>
+                    <li class="nav-item @if ($title == 'home') active @endif"><a href="{{ url('/') }}" class="nav-link pl-0">Home</a></li>
                     <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{ url('/programa') }}" class="nav-link">Programa</a></li>
                     <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{ url('/docente') }}" class="nav-link">Corpo Docente</a></li>
                     <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{ url('/pesquisa') }}" class="nav-link">Linhas de Pesquisa</a></li>

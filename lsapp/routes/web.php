@@ -36,7 +36,7 @@ Route::get('/pesquisa', 'PagesController@pesquisa');
 
 Route::get('/alunos', 'PagesController@alunos');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/formularios', 'PagesController@formularios');
 
 Route::get('/pesquisa', 'PagesController@pesquisa');
 

@@ -47,7 +47,10 @@ class PagesController extends Controller
 
     public function formularios(){
         $title ='formularios';
-        return view('pages.formularios')->with('title',$title);
+
+        $posts = Post::where('tag','formularios')->get();
+
+        return view('pages.formularios')->with('title',$title)->with('posts',$posts);
     }
 
     public function bolsas(){
