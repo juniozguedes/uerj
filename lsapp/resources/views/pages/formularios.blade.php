@@ -1,7 +1,10 @@
 @extends('layouts.app')
 @section('content')
-  <h1>Formulários</h1>
+<div class="container">
+<h1>Clique no link referente ao formulário que deseja:</h1>
+</div>
  @if(count($posts) > 0)
+ <div class="container-fluid">
 <div class="accordion" id="accordionExample">
    @for ($i = 0; $i < count($posts); $i++)
 
@@ -23,5 +26,6 @@
   @else
     <p>No posts found</p>
   @endif
+</div>
 @endsection
 

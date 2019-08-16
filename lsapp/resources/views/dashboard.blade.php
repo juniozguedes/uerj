@@ -20,12 +20,14 @@
                         <table class="table table-striped">
                             <tr>
                                 <th>Título</th>
+                                <th>Página da postagem</th>
                                 <th></th>
                                 <th></th>
                             </tr>
                             @foreach($posts as $post)
                             <tr>
                                 <td>{{$post->title}}</td>
+                                <td>{{$post->tag}}</td>
                                 <td><a href="/posts/{{$post->id}}/edit">Editar</a></td>
                                 <td>
                                 {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'pull-right'])!!}

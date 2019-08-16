@@ -38,19 +38,17 @@ Route::get('/alunos', 'PagesController@alunos');
 
 Route::get('/formularios', 'PagesController@formularios');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/bolsas', 'PagesController@bolsas');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/editais', 'PagesController@editais');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/doutorado', 'PagesController@doutorado');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/revista', 'PagesController@revista');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/capes', 'PagesController@capes');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
-
-Route::get('/pesquisa', 'PagesController@pesquisa');
+Route::get('/contato', 'PagesController@contato');
 
 Route::resource('posts', 'PostsController');
 Auth::routes();

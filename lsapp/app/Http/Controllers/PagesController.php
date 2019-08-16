@@ -55,17 +55,20 @@ class PagesController extends Controller
 
     public function bolsas(){
         $title ='bolsas';
-        return view('pages.bolsas')->with('title',$title);
+        $posts = Post::where('tag','bolsas')->get();
+        return view('pages.bolsas')->with('title',$title)->with('posts',$posts);
     }
 
     public function editais(){
         $title ='editais';
-        return view('pages.editais')->with('title',$title);
+        $posts = Post::where('tag','editais')->get();
+        return view('pages.editais')->with('title',$title)->with('posts',$posts);
     }
 
     public function doutorado(){
         $title ='doutorado';
-        return view('pages.doutorado')->with('title',$title);
+        $posts = Post::where('tag','doutorado')->get();
+        return view('pages.doutorado')->with('title',$title)->with('posts',$posts);
     }
 
     public function capes(){
@@ -80,7 +83,8 @@ class PagesController extends Controller
 
     public function revista(){
         $title ='revista';
-        return view('pages.revista')->with('title',$title);
+        $posts = Post::where('tag','revista')->get();
+        return view('pages.revista')->with('title',$title)->with('posts',$posts);
     }
 
     public function noticias(){

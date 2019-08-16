@@ -5,8 +5,8 @@
                     <div class="col-md-4 d-flex align-items-center py-4">
                         <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>Programa de Pós Graduação em Serviço Social</span></a>
                     </div>
-                    <div class="col-lg-8 d-block">
-                        <div class="row d-flex">
+                    <div id="parceiro" class="col-lg-8 d-block">
+                        <div id="parceiro" class="row d-flex">
 
                             <!--<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
                                 <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
@@ -14,36 +14,35 @@
                                     <span>2334-0299</span>
                                 </div>
                             </div>-->
-
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
 
-                                <img src="{{asset('images/navbar/parceiro1.png')}}" style="height: 50px; width: 50px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro1.png')}}" style="height: 50px; width: 50px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro2.png"/ style="height: 50px; width: 60px;">
-                            </div>
-
-
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro3.png"/ style="height: 40px; width: 40px;">
+                                <img id="parceiro" src="images/navbar/parceiro2.png"/ style="height: 50px; width: 60px;">
                             </div>
 
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro4.png"/ style="height: 50px; width: 50px;">
+                                <img id="parceiro" src="images/navbar/parceiro3.png"/ style="height: 40px; width: 40px;">
+                            </div>
+
+
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                <img id="parceiro" src="images/navbar/parceiro4.png"/ style="height: 50px; width: 50px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro5.png"/ style="height: 50px; width: 90px;">
+                                <img id="parceiro" src="images/navbar/parceiro5.png"/ style="height: 50px; width: 90px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro6.png"/ style="height: 40px; width: 90px;">
+                                <img id="parceiro" src="images/navbar/parceiro6.png"/ style="height: 40px; width: 90px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="images/navbar/parceiro7.png"/ style="height: 40px; width: 80px;">
+                                <img id="parceiro" src="images/navbar/parceiro7.png"/ style="height: 40px; width: 80px;">
                             </div>
 
 
@@ -95,8 +94,8 @@
                     <div class="col-md-4 d-flex align-items-center py-4">
                         <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>Programa de Pós Graduação em Serviço Social</span></a>
                     </div>
-                    <div class="col-lg-8 d-block">
-                        <div class="row d-flex">
+                    <div id="parceiro" class="col-lg-8 d-block">
+                        <div id="parceiro" class="row d-flex">
 
                             <!--<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
                                 <div class="icon d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
@@ -106,33 +105,33 @@
                             </div>-->
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro1.png')}}"/ style="height: 50px; width: 50px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro1.png')}}"/ style="height: 50px; width: 50px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro2.png')}}"/ style="height: 50px; width: 60px;">
-                            </div>
-
-
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro3.png')}}"/ style="height: 40px; width: 40px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro2.png')}}"/ style="height: 50px; width: 60px;">
                             </div>
 
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro4.png')}}"/ style="height: 50px; width: 50px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro3.png')}}"/ style="height: 40px; width: 40px;">
+                            </div>
+
+
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro4.png')}}"/ style="height: 50px; width: 50px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro5.png')}}"/ style="height: 50px; width: 90px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro5.png')}}"/ style="height: 50px; width: 90px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro6.png')}}"/ style="height: 40px; width: 90px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro6.png')}}"/ style="height: 40px; width: 90px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img src="{{asset('images/navbar/parceiro7.png')}}"/ style="height: 40px; width: 80px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro7.png')}}"/ style="height: 40px; width: 80px;">
                             </div>
 
 

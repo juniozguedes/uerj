@@ -1,13 +1,8 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-<h1>Informações Alunos</h1>
-</div>
-
-<div class="container-fluid">
+Revista
 @if(count($posts) > 0)
       @foreach($posts as $post)
-      <hr>
       <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
       <p>{!!$post->body!!}</p>
       <small>Data: {{$post->created_at}} por {{$post->user['name']}}</small>
@@ -20,7 +15,7 @@
       @endif
         @endforeach
   @else
-    <p>No posts found</p>
+    <p>Não há postagens</p>
   @endif
-</div>
+
 @endsection

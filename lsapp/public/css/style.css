@@ -1,6 +1,20 @@
 /*CUSTOM 
 */
 
+@media (max-width: 769.98px) {
+  #parceiro
+    {
+      display: none !important;
+    }
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px !important;
+    border: 0px solid transparent !important; 
+}
+
 .ftco-navbar-light .container-fluid {
     background: #0d1128;
 }

@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Bootstrap template & Custom -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
     <link rel="stylesheet" href="{{ asset('css/open-iconic-bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/animate.css') }}">
@@ -44,7 +44,7 @@
         @include('inc.navbar')
             @include('inc.messages')
             @yield('content')
-                <footer class="ftco-footer ftco-bg-dark ftco-section">
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md-12 col-lg-4">
@@ -64,17 +64,17 @@
             <div class="ftco-footer-widget mb-5 ml-md-4">
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Notícias</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Programa</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Corpo Docente</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Linhas de Pesquisa</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Seleção</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Aluno</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Estágio Docente</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Formulários</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Bolsas</a></li>
-                <li><a href="#"><span class="ion-ios-arrow-round-forward mr-2"></span>Contato</a></li>
+                <li><a href="{{ url('/') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
+                <li><a href="{{ url('/posts') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Notícias</a></li>
+                <li><a href="{{ url('/programa') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Programa</a></li>
+                <li><a href="{{ url('/docente') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Corpo Docente</a></li>
+                <li><a href="{{ url('/pesquisa') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Linhas de Pesquisa</a></li>
+                <li><a href="{{ url('/editais') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Editais e Seleção</a></li>
+                <li><a href="{{ url('/alunos') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Aluno</a></li>
+                <li><a href="{{ url('/docente') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Estágio Docente</a></li>
+                <li><a href="{{ url('/formularios') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Formulários</a></li>
+                <li><a href="{{ url('/bolsas') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Bolsas</a></li>
+                <li><a href="{{ url('/contato') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Contato</a></li>
               </ul>
             </div>
           </div>
@@ -95,7 +95,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  PPGS UERJ &copy;<script>document.write(new Date().getFullYear());</script> Todos os direitos reservados | Desenvolvido por<a href="https://www.linkedin.com/in/wellington-guedes-6321b249/" target="_blank">wguedes</a>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
