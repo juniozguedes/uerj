@@ -22,5 +22,47 @@
   @else
     <p>No posts found</p>
   @endif
+
+  @if(count($errors) > 0)
+    <div class="alert alert-danger">
+      <button type="button" class="close" data-dismiss="alert">x</button>
+      <ul>
+        @foreach($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+      </ul>
+    </div>
+  @endif
+
+
+  @if($message = Session::get('sucess'))
+    <div class="alert alert-sucess alert-block">
+      <button type="button" class="close" data-dismiss="alert">x</button>
+      <strong> {{ $message }} </strong>
+    </div>
+  @endif
+  <form method="post" action="{{ url('sendemail/send') }}">
+    {{ csrf_field() }}
+    <div class="form-group">
+      <label>Enter Your Name</label>
+      <input type="text" name="name" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Enter Your E-mail</label>
+      <input type="text" name="email" class="form-control">
+    </div>
+
+    <div class="form-group">
+      <label>Enter Your Message</label>
+      <textarea type="text" name="message" class="form-control">
+      </textarea>
+    </div>
+
+    <div class="form-group">
+      <input type="submit" name="send" value="Send" class="btn btn-info">
+    </div>
+  </form>
+
 </div>
 @endsection

@@ -2,10 +2,10 @@
       <div class="bg-top navbar-light">
             <div class="container-fluid">
                 <div class="row no-gutters d-flex align-items-center align-items-stretch">
-                    <div class="col-md-4 d-flex align-items-center py-4">
-                        <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>Programa de Pós Graduação em Serviço Social</span></a>
+                    <div class="col-md-6 d-flex align-items-center py-6">
+                        <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>Programa de Pós Graduação em Serviço Social Stricto Sensu</span></a>
                     </div>
-                    <div id="parceiro" class="col-lg-8 d-block">
+                    <div id="parceiro" class="col-lg-6 d-block">
                         <div id="parceiro" class="row d-flex">
 
                             <!--<div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
@@ -14,37 +14,32 @@
                                     <span>2334-0299</span>
                                 </div>
                             </div>-->
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
 
                                 <img id="parceiro" src="{{asset('images/navbar/parceiro1.png')}}" style="height: 50px; width: 50px;">
                             </div>
 
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
                                 <img id="parceiro" src="images/navbar/parceiro2.png"/ style="height: 50px; width: 60px;">
                             </div>
 
 
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
                                 <img id="parceiro" src="images/navbar/parceiro3.png"/ style="height: 40px; width: 40px;">
                             </div>
 
 
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
                                 <img id="parceiro" src="images/navbar/parceiro4.png"/ style="height: 50px; width: 50px;">
                             </div>
 
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
                                 <img id="parceiro" src="images/navbar/parceiro5.png"/ style="height: 50px; width: 90px;">
                             </div>
 
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
+                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
                                 <img id="parceiro" src="images/navbar/parceiro6.png"/ style="height: 40px; width: 90px;">
                             </div>
-
-                            <div class="col-md d-flex topper align-items-center align-items-stretch py-md-4">
-                                <img id="parceiro" src="images/navbar/parceiro7.png"/ style="height: 40px; width: 80px;">
-                            </div>
-
 
 
                             <!--<div class="col-md topper d-flex align-items-center justify-content-end">

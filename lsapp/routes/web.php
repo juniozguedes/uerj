@@ -57,3 +57,5 @@ Route::resource('pdfs', 'PdfsController');
 Auth::routes();
 
 Route::get('/dashboard', 'DashboardController@index');
+
+Route::post('/sendemail/send','SendEmailController@send');
