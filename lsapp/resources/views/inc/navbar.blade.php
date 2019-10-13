@@ -1,9 +1,20 @@
       @guest
+
+        <div id="language" style="position: fixed;top: 0px;right: 0px;padding: 0.5em 0.7em;background: transparent; display: block; width: 40px; height: auto; z-index: 99;">
+  
+            <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'en') }}" title="English"><img src="http://upload.wikimedia.org/wikipedia/commons/0/07/Icons-flag-uk.png" alt="English" /></a>
+
+            <a href="{{ route(\Illuminate\Support\Facades\Route::currentRouteName(), 'pt') }}" title="Portugues"><img src="{{asset('images/Icons-flag-br.png')}}"></a>
+        
+        </div>
+
+
+
       <div class="bg-top navbar-light">
             <div class="container-fluid">
                 <div class="row no-gutters d-flex align-items-center align-items-stretch">
                     <div class="col-md-6 d-flex align-items-center py-6">
-                        <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>Programa de Pós Graduação em Serviço Social Stricto Sensu</span></a>
+                        <a class="navbar-brand" href="{{ url('/') }}">UERJ<span>{{__('Programa de Pós Graduação em Serviço Social Stricto Sensu')}}</span></a>
                     </div>
                     <div id="parceiro" class="col-lg-6 d-block">
                         <div id="parceiro" class="row d-flex">
@@ -20,27 +31,26 @@
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
-                                <img id="parceiro" src="images/navbar/parceiro2.png"/ style="height: 50px; width: 60px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro2.png')}}"/ style="height: 50px; width: 60px;">
                             </div>
 
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
-                                <img id="parceiro" src="images/navbar/parceiro3.png"/ style="height: 40px; width: 40px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro3.png')}}"/ style="height: 40px; width: 40px;">
                             </div>
 
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
-                                <img id="parceiro" src="images/navbar/parceiro4.png"/ style="height: 50px; width: 50px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro4.png')}}"/ style="height: 50px; width: 50px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
-                                <img id="parceiro" src="images/navbar/parceiro5.png"/ style="height: 50px; width: 90px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro5.png')}}"/ style="height: 50px; width: 90px;">
                             </div>
 
                             <div class="col-md d-flex topper align-items-center align-items-stretch py-md-2">
-                                <img id="parceiro" src="images/navbar/parceiro6.png"/ style="height: 40px; width: 90px;">
+                                <img id="parceiro" src="{{asset('images/navbar/parceiro6.png')}}"/ style="height: 40px; width: 90px;">
                             </div>
-
 
                             <!--<div class="col-md topper d-flex align-items-center justify-content-end">
                                 <img src="images/logo.png"/ style="height: 100px; width: 100px;">
@@ -63,18 +73,18 @@
                     <li class="nav-item  @if ($title == 'home') active @endif" ><a href="{{ url('/') }}" class="
                     nav-link pl-0">Home</a></li>
 
-                    <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{ url('/programa') }}" class="nav-link">Programa</a></li>
-                    <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{ url('/docente') }}" class="nav-link">Corpo Docente</a></li>
-                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{ url('/pesquisa') }}" class="nav-link">Linhas de Pesquisa</a></li>
-                    <li class="nav-item @if ($title == 'alunos') active @endif"><a href="{{ url('/alunos') }}" class="nav-link">Informações Alunos</a></li>
-                    <li class="nav-item @if ($title == 'formularios') active @endif"><a href="{{ url('/formularios') }}" class="nav-link">Formulários</a></li>
-                    <li class="nav-item @if ($title == 'bolsas') active @endif"><a href="{{ url('/bolsas') }}" class="nav-link">Bolsas</a></li>
-                    <li class="nav-item @if ($title == 'editais') active @endif"><a href="{{ url('/editais') }}" class="nav-link">Editais Seleção</a></li>
-                    <li class="nav-item @if ($title == 'doutorado') active @endif"><a href="{{ url('/doutorado') }}" class="nav-link">Pós Doutorado</a></li>
-                    <li class="nav-item @if ($title == 'capes') active @endif"><a href="{{ url('/capes') }}" class="nav-link">CAPES Print</a></li>
-                    <li class="nav-item @if ($title == 'contato') active @endif"><a href="{{ url('/contato') }}" class="nav-link">Contato</a></li>
-                    <li class="nav-item @if ($title == 'revista') active @endif"><a href="{{ url('/revista') }}" class="nav-link">Revista</a></li>
-                    <li class="nav-item @if ($title == 'noticias') active @endif"><a href="{{ url('/posts') }}" class="nav-link">Notícias</a></li>
+                    <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{route('programa', app()->getLocale()) }}" class="nav-link">{{__('Programa')}}</a></li>
+                    <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{route('docente', app()->getLocale()) }}" class="nav-link">{{__('Corpo Docente')}}</a></li>
+                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{ url('/pesquisa') }}" class="nav-link">{{__('Linhas de Pesquisa')}}</a></li>
+                    <li class="nav-item @if ($title == 'alunos') active @endif"><a href="{{route('alunos', app()->getLocale()) }}" class="nav-link">{{__('Informações Alunos')}}</a></li>
+                    <li class="nav-item @if ($title == 'formularios') active @endif"><a href="{{route('formularios', app()->getLocale()) }}" class="nav-link">{{__('Formulários')}}</a></li>
+                    <li class="nav-item @if ($title == 'bolsas') active @endif"><a href="{{route('bolsas', app()->getLocale()) }}" class="nav-link">{{__('Bolsas')}}</a></li>
+                    <li class="nav-item @if ($title == 'editais') active @endif"><a href="{{route('editais', app()->getLocale()) }}" class="nav-link">Editais Seleção</a></li>
+                    <li class="nav-item @if ($title == 'doutorado') active @endif"><a href="{{route('doutorado', app()->getLocale()) }}" class="nav-link">Pós Doutorado</a></li>
+                    <li class="nav-item @if ($title == 'capes') active @endif"><a href="{{route('capes', app()->getLocale()) }}" class="nav-link">CAPES Print</a></li>
+                    <li class="nav-item @if ($title == 'contato') active @endif"><a href="{{route('contato', app()->getLocale()) }}" class="nav-link">{{__('Contato')}}</a></li>
+                    <li class="nav-item @if ($title == 'revista') active @endif"><a href="{{route('revista', app()->getLocale()) }}" class="nav-link">Revista</a></li>
+                    <li class="nav-item @if ($title == 'noticias') active @endif"><a href="{{ url('/posts') }}" class="nav-link">{{__('Notícias')}}</a></li>
                 </ul>
             </div>
         </div>
@@ -187,7 +197,7 @@
                         <!-- Authentication Links -->
                         @if (Route::has('register'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Registrar') }}</a>
+                                <a class="nav-link" href="{{ route('register', app()->getLocale()) }}">{{ __('Registrar') }}</a>
                             </li>
                         @endif
 
@@ -197,16 +207,16 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                    <a class="dropdown-item" href="{{ route('logout', app()->getLocale()) }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="/dashboard">
+                                    <a class="dropdown-item" href="{{route('dashboard', app()->getLocale()) }}">
                                         Painel Administrativo
                                     </a>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    <form id="logout-form" action="{{ route('logout', app()->getLocale()) }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
                                 </div>

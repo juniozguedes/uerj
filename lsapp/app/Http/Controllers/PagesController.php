@@ -11,8 +11,6 @@ class PagesController extends Controller
 {
     public function index(){
     	$title = 'home';
-
-
         $posts = Post::orderBy('created_at','desc')->paginate(3);
         return view('pages.index')->with('posts', $posts)->with('title',$title);
         //return view('pages.index', compact('title'));

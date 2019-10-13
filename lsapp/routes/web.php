@@ -25,37 +25,47 @@ Route::get('/about', function(){
 	return view('pages.about');
 });
 */
+Route::get('/', function () {
+    return redirect(app()->getLocale());
+});
 
-Route::get('/', 'PagesController@index');
+Route::group([
+  'prefix' => '{locale}', 
+  'where' => ['locale' => '[a-zA-Z]{2}'],
+  'middleware' => 'setlocale'
+], function() {
+	
+	Route::get('/', 'PagesController@index')->name('home');
 
-Route::get('/programa', 'PagesController@programa');
 
-Route::get('/docente', 'PagesController@docente');
+	Route::get('/programa', 'PagesController@programa')->name('programa');
 
-Route::get('/pesquisa', 'PagesController@pesquisa');
+	Route::get('/docente', 'PagesController@docente')->name('docente');
 
-Route::get('/alunos', 'PagesController@alunos');
+	Route::get('/pesquisa', 'PagesController@pesquisa')->name('pesquisa');
 
-Route::get('/formularios', 'PagesController@formularios');
+	Route::get('/alunos', 'PagesController@alunos')->name('alunos');
 
-Route::get('/bolsas', 'PagesController@bolsas');
+	Route::get('/formularios', 'PagesController@formularios')->name('formularios');
 
-Route::get('/editais', 'PagesController@editais');
+	Route::get('/bolsas', 'PagesController@bolsas')->name('bolsas');
 
-Route::get('/doutorado', 'PagesController@doutorado');
+	Route::get('/editais', 'PagesController@editais')->name('editais');
 
-Route::get('/revista', 'PagesController@revista');
+	Route::get('/doutorado', 'PagesController@doutorado')->name('doutorado');
 
-Route::get('/capes', 'PagesController@capes');
+	Route::get('/revista', 'PagesController@revista')->name('revista');
 
-Route::get('/contato', 'PagesController@contato');
+	Route::get('/capes', 'PagesController@capes')->name('capes');
 
-Route::resource('posts', 'PostsController');
-Auth::routes();
+	Route::get('/contato', 'PagesController@contato')->name('contato');
 
-Route::resource('pdfs', 'PdfsController');
-Auth::routes();
+});
+	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+	Route::resource('pdfs', 'PdfsController');
+	Route::post('/sendemail/send','SendEmailController@send');
+	Route::resource('posts', 'PostsController');
+	Auth::routes();
 
-Route::get('/dashboard', 'DashboardController@index');
 
-Route::post('/sendemail/send','SendEmailController@send');
+	

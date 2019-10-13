@@ -6,7 +6,7 @@
 
 		@if(count($posts) > 0)
     	@foreach($posts as $post)
- 			<h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
+ 			<h3><a href="{{route('posts.show', ['post' => $post->id])}}">{{$post->title}}</a></h3>
  			<p>{!!$post->body!!}</p>
  			<small>Data: {{$post->created_at}} por {{$post->user['name']}}</small>
  			@if($post->filename !== 'none')

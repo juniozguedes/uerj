@@ -9,9 +9,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Inscrições abertas!</h1>
-            <p>Alunos externos poderão se inscrever para disciplinas 2019.2</p>
-            <p><a href="#section-counter" class="btn btn-primary px-4 py-3 mt-3">Saiba mais</a></p>
+            <h1 class="mb-4">{{__('Inscrições abertas!')}}</h1>
+            <p>{{__('Alunos externos poderão se inscrever para disciplinas 2019.2')}}</p>
+            <p><a href="#section-counter" class="btn btn-primary px-4 py-3 mt-3">{{__('Saiba mais')}}</a></p>
           </div>
         </div>
         </div>
@@ -22,9 +22,9 @@
         <div class="container">
           <div class="row no-gutters slider-text align-items-center justify-content-start" data-scrollax-parent="true">
           <div class="col-md-6 ftco-animate">
-            <h1 class="mb-4">Informações PPGS</h1>
-            <p>Conheça o projeto.</p>
-            <p><a href="#apresenta" class="btn btn-primary px-4 py-3 mt-3">Saiba mais</a></p>
+            <h1 class="mb-4">{{__('Informações PPGS')}}</h1>
+            <p>{{__('Conheça o projeto.')}}</p>
+            <p><a href="#apresenta" class="btn btn-primary px-4 py-3 mt-3">{{__('Saiba mais')}}</a></p>
           </div>
         </div>
         </div>
@@ -85,11 +85,11 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
     	<div class="container" id="apresenta">
     		<div class="row justify-content-center mb-5 pb-2 d-flex">
           		<div class="col-md-12 heading-section heading-section-white ftco-animate pl-lg-12 pt-md-0 pt-12">
-            <h2 class="mb-4">Apresentação</h2>
-            <p>Criado no ultimo ano da última década do século XX, ou seja, em 1999, o PPGSS/UERJ elege como áreas de concentração temas significativos e relevantes para o país e o Estado do Rio de Janeiro: trabalho e política social. O objetivo central do Programa de Pós-Graduação em Serviço Social da Universidade do Estado do Rio de Janeiro (PPGSS/UERJ) é o de formar pesquisadores de alto nível, em Serviço Social e áreas afins, qualificados para o ensino superior, para a produção e difusão de conhecimentos sobre as questões afetas ao trabalho, as políticas sociais e Serviço Social na América Latina, com ênfase no Brasil e para a intervenção qualificada no âmbito das políticas sociais.</p>
-        	<p>Os objetivos do Programa e o tempo de existência dos cursos – o Mestrado completou quatorze anos e o Doutorado, 9 anos, em 2013 - e o elevado índice de produções acadêmicas do corpo docente, atestado, sobretudo pelo processo de avaliação de livros da área (Qualis Livros), faz com que hoje o PPGSS/UERJ possua uma inserção nacional – inclusive desenvolvendo um DINTER coma UFAL a partir de 2013 - e regional já consolidada que se expressa na evolução de seu processo seletivo, na demanda de participação de alunos externos e na intensificação da procura pelo pós-doutoramento nos últimos anos. O PPGSS teve seu conceito, atribuído pela CAPES, elevado para 6 (seis), em 2013. Está em curso um processo de internacionalização do PPGSS, especialmente com a atração de estudantes dos países africanos de língua portuguesa e europeus, o que esperamos consolidar nos anos vindouros.</p>
+            <h2 class="mb-4">{{__('Apresentação')}}</h2>
+            <p>{{__('Criado no ultimo ano da última década do século XX, ou seja, em 1999, o PPGSS/UERJ elege como áreas de concentração temas significativos e relevantes para o país e o Estado do Rio de Janeiro: trabalho e política social. O objetivo central do Programa de Pós-Graduação em Serviço Social da Universidade do Estado do Rio de Janeiro (PPGSS/UERJ) é o de formar pesquisadores de alto nível, em Serviço Social e áreas afins, qualificados para o ensino superior, para a produção e difusão de conhecimentos sobre as questões afetas ao trabalho, as políticas sociais e Serviço Social na América Latina, com ênfase no Brasil e para a intervenção qualificada no âmbito das políticas sociais')}}.</p>
+        	<p>{{__('Os objetivos do Programa e o tempo de existência dos cursos – o Mestrado completou quatorze anos e o Doutorado, 9 anos, em 2013 - e o elevado índice de produções acadêmicas do corpo docente, atestado, sobretudo pelo processo de avaliação de livros da área (Qualis Livros), faz com que hoje o PPGSS/UERJ possua uma inserção nacional – inclusive desenvolvendo um DINTER coma UFAL a partir de 2013 - e regional já consolidada que se expressa na evolução de seu processo seletivo, na demanda de participação de alunos externos e na intensificação da procura pelo pós-doutoramento nos últimos anos. O PPGSS teve seu conceito, atribuído pela CAPES, elevado para 6 (seis), em 2013. Está em curso um processo de internacionalização do PPGSS, especialmente com a atração de estudantes dos países africanos de língua portuguesa e europeus, o que esperamos consolidar nos anos vindouros')}}.</p>
 
-        						<p><a href="/" class="btn btn-primary px-4 py-3 mt-3">VOLTAR</a></p>
+        						<p><a href="/" class="btn btn-primary px-4 py-3 mt-3">{{__('VOLTAR')}}</a></p>
 
           		</div>
           		    		<div class="row d-md-flex align-items-center justify-content-center">
@@ -99,8 +99,8 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
 		            <div class="block-18">
 		            	<div class="icon"><span class="flaticon-doctor"></span></div>
 		              <div class="text">
-		                <strong class="number" data-number="18">0</strong>
-		                <span>+Professores</span>
+		                <strong class="number" data-number="50">0</strong>
+		                <span>+{{__('Professores')}}</span>
 		              </div>
 		            </div>
 		          </div>
@@ -108,8 +108,8 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
 		            <div class="block-18">
 		            	<div class="icon"><span class="flaticon-doctor"></span></div>
 		              <div class="text">
-		                <strong class="number" data-number="1200">0</strong>
-		                <span>+Estudantes</span>
+		                <strong class="number" data-number="2000">0</strong>
+		                <span>+{{__('Estudantes')}}</span>
 		              </div>
 		            </div>
 		          </div>
@@ -117,8 +117,8 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
 		            <div class="block-18">
 		            	<div class="icon"><span class="flaticon-doctor"></span></div>
 		              <div class="text">
-		                <strong class="number" data-number="20">0</strong>
-		                <span>+Cursos</span>
+		                <strong class="number" data-number="30">0</strong>
+		                <span>+{{__('Cursos')}}</span>
 		              </div>
 		            </div>
 		          </div>
@@ -180,7 +180,7 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
 				</div>
 			</div>
 		</section>
-
+<!--
 		<section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-2">
@@ -302,6 +302,7 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
         </div>
     	</div>
     </section>
+  -->
 <!--
 	@if(count($posts) > 0)
     	@foreach($posts as $post)

@@ -30,7 +30,7 @@
                                 <td>{{$post->tag}}</td>
                                 <td><a href="/posts/{{$post->id}}/edit">Editar</a></td>
                                 <td>
-                                {!!Form::open(['action' => ['PostsController@destroy', $post->id], 'method'=>'POST', 'class'=>'pull-right'])!!}
+                                {!!Form::open(['action' => ['PostsController@destroy', $post->id, app()->getLocale()], 'method'=>'POST', 'class'=>'pull-right'])!!}
                                     {{Form::hidden('_method','DELETE')}}
                                     {{Form::submit('Deletar postagem',['class' => 'btn btn-danger'])}}
                                 {!!Form::close() !!}
@@ -65,7 +65,7 @@
                             <tr>
                             <div class="btn-group">
                             <a class="btn btn-primary" href="{{ url('storage/files/'.$pdf->filename) }}" target="_blank">{{$pdf->filename}}</a>
-                                {!!Form::open(['action' => ['PdfsController@destroy', $pdf->id], 'method'=>'POST', 'class'=>'pull-right'])!!}
+                                {!!Form::open(['action' => ['PdfsController@destroy', $pdf->id, app()->getLocale()], 'method'=>'POST', 'class'=>'pull-right'])!!}
                                     {{Form::hidden('_method','DELETE')}}
                                     {{Form::submit('Deletar',['class' => 'btn btn-danger'])}}
                                 {!!Form::close() !!}

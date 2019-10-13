@@ -1,9 +1,11 @@
 @extends('layouts.app')
 
 @section('content')
-	<a href="/posts" class="btn btn-default">Go back</a>
-	<h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
- 	<p>{!!$post->body!!}</p> <!--Por causa do CKEDITOR -->		
+	<a href="/" class="btn btn-default">Go back</a>
+
+
+	<h3><a href="{{route('posts.show', ['post' => $post->id])}}">{{$post->title}}</a></h3>
+ 	<p>{!!$post->body!!}</p><!-- Por causa do CKEDITOR -->		
 	<hr>
 	<small>Data: {{$post->created_at}} por {{$post->user['name']}}</small>
  	<hr>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-<section class="hero-wrap hero-wrap-2" style="background-image: url('images/IMG-20190126-WA0053.jpg');">
+<section class="hero-wrap hero-wrap-2" style="background-image:url({{url('images/IMG-20190126-WA0053.jpg')}})">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
@@ -18,13 +18,11 @@
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Silene de Moraes Freire</h3>
-                <span class="position mb-2">(Coordenadora do PPGSS)</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Silene de Moraes Freire</h3>
+                <span class="position mb-2">({{__('Coordenadora do PPGSS')}})</span>
                 <div class="faded">
-                  <p>Professora do Corpo Permanente
-Bolsista de Produtividade em Pesquisa 1C | Procientista da UERJ
-Doutorado em Sociologia pela Universidade de São Paulo, Brasil(1999)
-Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
+                  <p>{{__('Professora do Corpo Permanente')}}
+{{__('Bolsista de Produtividade em Pesquisa 1C|Procientista da UERJ Doutorado em Sociologia pela Universidade de São Paulo, Brasil(1999) Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.')}}</p>
 <p><a href="http://lattes.cnpq.br/9399432141689396" alt="Acesse a Plataforma Lattes para maiores informações!" target="_blank">Currículo Lattes</a></p>
                   <ul class="ftco-social text-center">
                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -39,12 +37,11 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Vania Morales Sierra</h3>
-                <span class="position mb-2">(Coordenadora Adjunta do PPGSS)</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Vania Morales Sierra</h3>
+                <span class="position mb-2">({{__('Coordenadora Adjunta do PPGSS')}})</span>
                 <div class="faded">
-                  <p>Professora do Corpo Permanente
-Doutorado em Sociologia pelo Instituto Universitario de Pesquisa do Estado do Rio de Janeiro, Brasil(2004)
-Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
+                  <p>{{__('Professora do Corpo Permanente')}}
+{{__('Doutorado em Sociologia pelo Instituto Universitario de Pesquisa do Estado do Rio de Janeiro, Brasil(2004) Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.')}}</p>
 <p><a href="http://lattes.cnpq.br/6362471071411665" alt="Acesse a Plataforma Lattes para maiores informações!" target="_blank">Currículo Lattes</a></p>
                   <ul class="ftco-social text-center">
                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -59,11 +56,10 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Alba Tereza Barroso de Castro</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Alba Tereza Barroso de Castro</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
-                  <p>Doutorado em Serviço Social pela Pontifícia Universidade Católica de São Paulo, Brasil (2001).
-Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
+                  <p>{{__('Doutorado em Serviço Social pela Pontifícia Universidade Católica de São Paulo, Brasil (2001). Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.')}}</p>
 <p><a href="http://lattes.cnpq.br/0742769714080881" alt="Acesse a Plataforma Lattes para maiores informações!" target="_blank">Currículo Lattes</a></p>
                   <ul class="ftco-social text-center">
                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -78,12 +74,10 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Elaine Rossetti Behring</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Elaine Rossetti Behring</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
-                  <p>Bolsista de Produtividade em Pesquisa 1D | Procientista da UERJ
-Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(2002)
-Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
+                  <p>{{__('Bolsista de Produtividade em Pesquisa 1D | Procientista da UERJ Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(2002) Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.')}}</p>
 <p><a href="http://lattes.cnpq.br/4485025858173992" alt="Acesse a Plataforma Lattes para maiores informações!" target="_blank">Currículo Lattes</a></p>
                   <ul class="ftco-social text-center">
                     <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
@@ -99,8 +93,8 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Ana Maria de Vasconcelos</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Ana Maria de Vasconcelos</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Bolsista de Produtividade em Pesquisa 1D | Procientista da UERJ
 Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(1999)
@@ -119,7 +113,7 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Carla Cristina Lima de Almeida</h3>
+                <h3>{{__('Profa')}} {{__('Dra')}} Carla Cristina Lima de Almeida</h3>
                 <span class="position mb-2">Professora do Corpo Permamente</span>
                 <div class="faded">
                   <p>Doutorado em Ciências Sociais pela Universidade Estadual de Campinas, Brasil(2004)
@@ -138,10 +132,10 @@ Linha de Pesquisa: Identidades, Cultura, Políticas Públicas e Serviço Social.
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Isabel Cristina Costa Cardoso</h3>
+                <h3>{{__('Profa')}} {{__('Dra')}} Isabel Cristina Costa Cardoso</h3>
                 <span class="position mb-2">Art Teacher</span>
                 <div class="faded">
-                  <p>Professora do Corpo Permanente.</p>
+                  <p>{{__('Professora do Corpo Permanente')}}.</p>
                   <p>Doutorado em Sociologia pela Universidade de São Paulo, Brasil(2006)
 Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social</p>
 <p><a href="http://lattes.cnpq.br/8273858410645942" alt="Acesse a Plataforma Lattes para maiores informações!" target="_blank">Currículo Lattes</a></p>
@@ -177,8 +171,8 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Maria Ines Souza Bravo</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Maria Ines Souza Bravo</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Bolsista de Produtividade em Pesquisa 1B
 Doutorado em Serviço Social pela Pontifícia Universidade Católica de São Paulo, Brasil(1991)
@@ -197,8 +191,8 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Marilda Villela Iamamoto</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Marilda Villela Iamamoto</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Bolsista de Produtividade em Pesquisa 1D | Procientista da UERJ
 Doutorado em Ciências Sociais pela Pontifícia Universidade Católica de São Paulo, Brasil(2001)
@@ -217,7 +211,7 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Mônica Maria Torres de Alencar</h3>
+                <h3>{{__('Profa')}} {{__('Dra')}} Mônica Maria Torres de Alencar</h3>
                 <span class="position mb-2">Professor Colaborador</span>
                 <div class="faded">
                   <p>Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(2005)
@@ -236,8 +230,8 @@ Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Rosangela Nair de Carvalho Barbosa</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Rosangela Nair de Carvalho Barbosa</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Serviço Social pela Pontifícia Universidade Católica de São Paulo, Brasil(2005)
 Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
@@ -255,8 +249,8 @@ Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Valéria Lucília Forti</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Valéria Lucília Forti</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(2008)
 Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
@@ -274,8 +268,8 @@ Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa Dra Ana Inês Simões Cardoso de Melo</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}} {{__('Dra')}} Ana Inês Simões Cardoso de Melo</h3>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Saúde Pública pela Fundação Oswaldo Cruz, Brasil(2007)
 Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
@@ -294,7 +288,7 @@ Linha de Pesquisa: Trabalho, Relações Sociais e Serviço Social.</p>
             <div class="staff">
               <div class="text pt-3 text-center">
                 <h3>Prof Dr Guilherme Silva de Almeida</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Saúde Coletiva pela Universidade do Estado do Rio de Janeiro, Brasil(2005)
 Linha de Pesquisa: Identidades, Cultura, Políticas Públicas e Serviço Social.</p>
@@ -313,7 +307,7 @@ Linha de Pesquisa: Identidades, Cultura, Políticas Públicas e Serviço Social.
             <div class="staff">
               <div class="text pt-3 text-center">
                 <h3>Prof Dr Maurílio Castro de Matos</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Serviço Social pela Pontifícia Universidade Católica de São Paulo, Brasil(2009)
 Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
@@ -332,7 +326,7 @@ Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
             <div class="staff">
               <div class="text pt-3 text-center">
                 <h3>Prof. Dr. Renato dos Santos Veloso</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Serviço Social pela Universidade Federal do Rio de Janeiro, Brasil(2006)
 Linha de Pesquisa: Questão Social, Políticas Públicas e Serviço Social.</p>
@@ -352,8 +346,8 @@ Currículo Lattes
           <div class="col-md-6 col-lg-3 ftco-animate">
             <div class="staff">
               <div class="text pt-3 text-center">
-                <h3>Profa. Dra. Andréa de Sousa Gama</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <h3>{{__('Profa')}}. {{__('Dra')}}. Andréa de Sousa Gama</h3>
+                <span class="position mb-2">{{__('Professora Colaboradora')}}</span>
                 <div class="faded">
                   <p>Doutorado em Saúde Pública pela Fundação Oswaldo Cruz, Brasil(2012)
 Linha de Pesquisa: ​Identidades, Cultura, Políticas Públicas e Serviço Social.</p>
@@ -418,7 +412,7 @@ Currículo Lattes
             <div class="staff">
               <div class="text pt-3 text-center">
                 <h3>Prof Dr Ney Luiz Teixeira de Almeida</h3>
-                <span class="position mb-2">Professora do Corpo Permanente</span>
+                <span class="position mb-2">{{__('Professora do Corpo Permanente')}}</span>
                 <div class="faded">
                   <p>Doutorado em Educação pela Universidade Federal Fluminense, Brasil(2010)
 Linha de Pesquisa:Trabalho, Relações Sociais e Serviço Social.</p>
