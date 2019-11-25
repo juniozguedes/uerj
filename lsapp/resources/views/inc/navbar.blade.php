@@ -75,7 +75,7 @@
 
                     <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{route('programa', app()->getLocale()) }}" class="nav-link">{{__('Programa')}}</a></li>
                     <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{route('docente', app()->getLocale()) }}" class="nav-link">{{__('Corpo Docente')}}</a></li>
-                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{ url('/pesquisa') }}" class="nav-link">{{__('Linhas de Pesquisa')}}</a></li>
+                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{route('pesquisa', app()->getLocale()) }}" class="nav-link">{{__('Linhas de Pesquisa')}}</a></li>
                     <li class="nav-item @if ($title == 'alunos') active @endif"><a href="{{route('alunos', app()->getLocale()) }}" class="nav-link">{{__('Informações Alunos')}}</a></li>
                     <li class="nav-item @if ($title == 'formularios') active @endif"><a href="{{route('formularios', app()->getLocale()) }}" class="nav-link">{{__('Formulários')}}</a></li>
                     <li class="nav-item @if ($title == 'bolsas') active @endif"><a href="{{route('bolsas', app()->getLocale()) }}" class="nav-link">{{__('Bolsas')}}</a></li>
@@ -158,19 +158,20 @@
             </button>
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav mr-auto">
-                    <li class="nav-item @if ($title == 'home') active @endif"><a href="{{ url('/') }}" class="nav-link pl-0">Home</a></li>
-                    <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{ url('/programa') }}" class="nav-link">Programa</a></li>
-                    <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{ url('/docente') }}" class="nav-link">Corpo Docente</a></li>
-                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{ url('/pesquisa') }}" class="nav-link">Linhas de Pesquisa</a></li>
-                    <li class="nav-item @if ($title == 'alunos') active @endif"><a href="{{ url('/alunos') }}" class="nav-link">Informações Alunos</a></li>
-                    <li class="nav-item @if ($title == 'formularios') active @endif"><a href="{{ url('/formularios') }}" class="nav-link">Formulários</a></li>
-                    <li class="nav-item @if ($title == 'bolsas') active @endif"><a href="{{ url('/bolsas') }}" class="nav-link">Bolsas</a></li>
-                    <li class="nav-item @if ($title == 'editais') active @endif"><a href="{{ url('/editais') }}" class="nav-link">Editais Seleção</a></li>
-                    <li class="nav-item @if ($title == 'doutorado') active @endif"><a href="{{ url('/doutorado') }}" class="nav-link">Pós Doutorado</a></li>
-                    <li class="nav-item @if ($title == 'capes') active @endif"><a href="{{ url('/capes') }}" class="nav-link">CAPES Print</a></li>
-                    <li class="nav-item @if ($title == 'contato') active @endif"><a href="{{ url('/contato') }}" class="nav-link">Contato</a></li>
-                    <li class="nav-item @if ($title == 'revista') active @endif"><a href="{{ url('/revista') }}" class="nav-link">Revista</a></li>
-                    <li class="nav-item @if ($title == 'noticias') active @endif"><a href="{{ url('/posts') }}" class="nav-link">Notícias</a></li>
+                <li class="nav-item  @if ($title == 'home') active @endif" ><a href="{{ url('/') }}" class="
+                    nav-link pl-0">Home</a></li>
+                    <li class="nav-item @if ($title == 'programa') active @endif"><a href="{{route('programa', app()->getLocale()) }}" class="nav-link">{{__('Programa')}}</a></li>
+                    <li class="nav-item @if ($title == 'docente') active @endif"><a href="{{route('docente', app()->getLocale()) }}" class="nav-link">{{__('Corpo Docente')}}</a></li>
+                    <li class="nav-item @if ($title == 'pesquisa') active @endif"><a href="{{route('pesquisa', app()->getLocale()) }}" class="nav-link">{{__('Linhas de Pesquisa')}}</a></li>
+                    <li class="nav-item @if ($title == 'alunos') active @endif"><a href="{{route('alunos', app()->getLocale()) }}" class="nav-link">{{__('Informações Alunos')}}</a></li>
+                    <li class="nav-item @if ($title == 'formularios') active @endif"><a href="{{route('formularios', app()->getLocale()) }}" class="nav-link">{{__('Formulários')}}</a></li>
+                    <li class="nav-item @if ($title == 'bolsas') active @endif"><a href="{{route('bolsas', app()->getLocale()) }}" class="nav-link">{{__('Bolsas')}}</a></li>
+                    <li class="nav-item @if ($title == 'editais') active @endif"><a href="{{route('editais', app()->getLocale()) }}" class="nav-link">Editais Seleção</a></li>
+                    <li class="nav-item @if ($title == 'doutorado') active @endif"><a href="{{route('doutorado', app()->getLocale()) }}" class="nav-link">Pós Doutorado</a></li>
+                    <li class="nav-item @if ($title == 'capes') active @endif"><a href="{{route('capes', app()->getLocale()) }}" class="nav-link">CAPES Print</a></li>
+                    <li class="nav-item @if ($title == 'contato') active @endif"><a href="{{route('contato', app()->getLocale()) }}" class="nav-link">{{__('Contato')}}</a></li>
+                    <li class="nav-item @if ($title == 'revista') active @endif"><a href="{{route('revista', app()->getLocale()) }}" class="nav-link">Revista</a></li>
+                    <li class="nav-item @if ($title == 'noticias') active @endif"><a href="{{ url('/posts') }}" class="nav-link">{{__('Notícias')}}</a></li>
                 </ul>
             </div>
         </div>
