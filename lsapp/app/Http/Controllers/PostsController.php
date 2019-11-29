@@ -85,9 +85,8 @@ class PostsController extends Controller
 
         //Check for tag and Create Post
         $post = new Post;
-
-        if ($request->input('tag') !== null) {
-            $post->tag = $request->input('tag');
+        if ($request->tag !== null) {
+            $post->tag = $request->tag;
         }   
 
         $post->title = $request->input('title');

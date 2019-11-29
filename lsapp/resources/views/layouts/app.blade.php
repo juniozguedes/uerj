@@ -65,16 +65,15 @@
               <h2 class="ftco-heading-2">Links</h2>
               <ul class="list-unstyled">
                 <li><a href="{{ url('/') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Home</a></li>
-                <li><a href="{{ url('/posts') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Notícias</a></li>
-                <li><a href="{{ url('/programa') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Programa</a></li>
-                <li><a href="{{ url('/docente') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Corpo Docente</a></li>
-                <li><a href="{{ url('/pesquisa') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Linhas de Pesquisa</a></li>
-                <li><a href="{{ url('/editais') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Editais e Seleção</a></li>
-                <li><a href="{{ url('/alunos') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Aluno</a></li>
-                <li><a href="{{ url('/docente') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Estágio Docente</a></li>
-                <li><a href="{{ url('/formularios') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Formulários</a></li>
-                <li><a href="{{ url('/bolsas') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Bolsas</a></li>
-                <li><a href="{{ url('/contato') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>Contato</a></li>
+                <li><a href="{{ url('/posts') }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Notícias')}}</a></li>
+                <li><a href="{{route('programa', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Programa')}}</a></li>
+                <li><a href="{{route('docente', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Corpo Docente')}}</a></li>
+                <li><a href="{{route('pesquisa', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Linhas de Pesquisa')}}</a></li>
+                <li><a href="{{route('editais', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Editais e Seleção')}}</a></li>
+                <li><a href="{{route('alunos', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Informações Alunos')}}</a></li>
+                <li><a href="{{route('formularios', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Formulários')}}</a></li>
+                <li><a href="{{route('bolsas', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Bolsas')}}</a></li>
+                <li><a href="{{route('contato', app()->getLocale()) }}"><span class="ion-ios-arrow-round-forward mr-2"></span>{{__('Contato')}}</a></li>
               </ul>
             </div>
           </div>
