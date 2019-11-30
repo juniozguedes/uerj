@@ -56,7 +56,7 @@ class PostsController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
-            'body' => 'required',
+            'body' => 'nullable',
             'filename' => 'nullable',
             'tag' => 'nullable'
             ]);

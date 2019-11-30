@@ -68,7 +68,11 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
           <div class="text bg-white p-4">
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             <div class="d-flex align-items-center mt-4">
+				@if ($post->filename = 'None')
+				<p><a href="/posts/{{$post->id}}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download do arquivo</a></p>
+				@else
               <p><a href="{{ url('storage/files/'.$post->filename) }}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download do arquivo</a></p>
+			    @endif 
               <img src="{{ url('storage/files/'.$post->filename) }}" alt="" title="" />         
             </div>
           </div>
