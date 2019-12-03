@@ -60,6 +60,10 @@ Route::group([
 
 	Route::get('/contato', 'PagesController@contato')->name('contato');
 
+	Route::get('/posts', 'PostsController@index')->name('postsIndex');
+
+	Route::get('/posts/{post}', 'PostsController@index')->name('postsShow');
+
 });
 	Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 	Route::resource('pdfs', 'PdfsController');

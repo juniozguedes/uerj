@@ -10,9 +10,10 @@ use DB;
 class PagesController extends Controller
 {
     public function index(){
+        $locale = app()->getLocale();
     	$title = 'home';
         $posts = Post::orderBy('created_at','desc')->paginate(3);
-        return view('pages.index')->with('posts', $posts)->with('title',$title);
+        return view('pages.index')->with('posts', $posts)->with('title',$title)->with('locale',$locale);
         //return view('pages.index', compact('title'));
 
     }

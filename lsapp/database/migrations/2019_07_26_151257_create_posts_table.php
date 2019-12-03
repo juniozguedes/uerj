@@ -17,6 +17,14 @@ class CreatePostsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->mediumText('body')->nullable(True);
+
+            $table->string('titleeng')->nullable(True);
+            $table->mediumText('bodyeng')->nullable(True);
+
+            $table->string('titleesp')->nullable(True);
+            $table->mediumText('bodyesp')->nullable(True);
+
+
             $table->timestamps();
         });
     }

@@ -20,6 +20,27 @@
 	</div>
 
 	{{Form::submit('Submit',['class'=>'btn btn-primary'])}}
+
+	<h1>Outros idiomas:</h1>
+	<p>Inglês:</p>
+	<div class="form-group">
+		{{Form::text('titleeng','',['class'=>'form-control', 'placeholder' => 'Título em Inglês'])}}
+	</div>
+	<div class="form-group">
+		{{Form::textarea('bodyeng', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Corpo em Inglês'])}}
+	</div>
+
+	<p>Espanhol:</p>
+	<div class="form-group">
+		{{Form::text('titleesp','',['class'=>'form-control', 'placeholder' => 'Título em Espanhol'])}}
+	</div>
+	<div class="form-group">
+		{{Form::textarea('bodyesp', '', ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Corpo em Espanhol'])}}
+	</div>
+
+	
+
+
 {!! Form::close() !!}
 </div>
 @endsection

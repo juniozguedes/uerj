@@ -22,8 +22,9 @@ class PostsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+    public function index(Request $request)
+    {   
+        $locale = app()->getLocale();
         //$posts = Post::all();
         //$posts = Post::orderBy('title','asc')->get();
         $posts = Post::where('tag','none')->paginate(6);
@@ -31,7 +32,7 @@ class PostsController extends Controller
         //$posts = Post::orderBy('title','desc')->take(1)->get();
         //$posts = Post::orderBy('created_at','desc')->paginate(6);
         $title = 'none';
-        return view('posts.index')->with('posts', $posts)->with('title',$title);
+        return view('posts.index')->with('posts', $posts)->with('title',$title)->with('locale',$locale);
     }
 
     /**
@@ -58,7 +59,11 @@ class PostsController extends Controller
             'title' => 'required',
             'body' => 'nullable',
             'filename' => 'nullable',
-            'tag' => 'nullable'
+            'tag' => 'nullable',
+            'titleeng' => 'nullable',
+            'bodyeng' => 'nullable',
+            'titleesp' => 'nullable',
+            'bodyesp' => 'nullable',
             ]);
 
         //File
@@ -93,6 +98,14 @@ class PostsController extends Controller
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->filename = $fileNameToStore;
+
+        //eng/esp
+        $post->titleeng = $request->input('titleeng');
+        $post->bodyeng = $request->input('bodyeng');
+        $post->titleesp = $request->input('titleesp');
+        $post->bodyesp = $request->input('bodyesp');
+
+
         $post->save();
         $title = 'none';
 
@@ -107,6 +120,7 @@ class PostsController extends Controller
      */
     public function show($id)
     {
+        $locale = app()->getLocale();
         /*Podemos passar via array como $data ou via corrente como eu fiz
         $data = [
             'post'  => Post::find($id);,
@@ -149,7 +163,7 @@ class PostsController extends Controller
     {
         $this->validate($request,[
             'title' => 'required',
-            'body' => 'required',
+            'body' => 'nullable',
             ]);
 
 
@@ -179,13 +193,21 @@ class PostsController extends Controller
         $post = Post::find($id);
 
         if ($request->input('tag') !== null) {
-            $post->tag = $request->input('tag');
+            $post->tag = $request->tag;
         }   
 
         $post->title = $request->input('title');
         $post->body = $request->input('body');
         $post->user_id = auth()->user()->id;
         $post->filename = $fileNameToStore;
+
+        //eng/esp
+        $post->titleeng = $request->input('titleeng');
+        $post->bodyeng = $request->input('bodyeng');
+        $post->titleesp = $request->input('titleesp');
+        $post->bodyesp = $request->input('bodyesp');
+        
+
         $post->save();
         $title = 'none';
 

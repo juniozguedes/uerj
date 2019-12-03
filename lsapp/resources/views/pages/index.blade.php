@@ -62,13 +62,36 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
         </div>
 				<div class="row">
 
+		@if ($locale == 'en')
+        @if(count($posts) > 0)
+        @foreach($posts as $post)
+        <div class="col-md-4 col-lg-4 col-sm-12">
+          <div class="text bg-white p-4">
+            <h3><a href="/posts/{{$post->id}}">{{$post->titleeng}}</a></h3>
+            <div class="d-flex align-items-center mt-4">
+				@if ($post->filename == 'None')
+				<p><a href="/posts/{{$post->id}}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download</a></p>
+				@else
+              <p><a href="{{ url('storage/files/'.$post->filename) }}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download</a></p>
+			    @endif 
+              <img src="{{ url('storage/files/'.$post->filename) }}" alt="" title="" />         
+            </div>
+          </div>
+        </div>
+        @endforeach
+        @else
+        <p>No posts</p>
+        @endif
+		@endif
+
+		@if ($locale == 'pt')
         @if(count($posts) > 0)
         @foreach($posts as $post)
         <div class="col-md-4 col-lg-4 col-sm-12">
           <div class="text bg-white p-4">
             <h3><a href="/posts/{{$post->id}}">{{$post->title}}</a></h3>
             <div class="d-flex align-items-center mt-4">
-				@if ($post->filename = 'None')
+				@if ($post->filename == 'None')
 				<p><a href="/posts/{{$post->id}}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download do arquivo</a></p>
 				@else
               <p><a href="{{ url('storage/files/'.$post->filename) }}" class="btn btn-primary px-4 py-3 mt-3" target="_blank">Download do arquivo</a></p>
@@ -81,8 +104,13 @@ Serão oferecidas 2 (duas) disciplinas, a saber: </p>
         @else
         <p>Não há postagens</p>
         @endif
+		@endif
 
-            <p><a style="background-color: black;" href="/" class="btn btn-primary px-4 py-3 mt-3">Início</a></p>
+		<div class="col-md-12">
+		<div class="row">
+        <p><a style="background-color: black;" href="/" class="btn btn-primary px-4 py-3 mt-3">Início</a></p>
+		</div>
+		</div>
 
 		</section>
          <section class="ftco-section ftco-counter img apresenta" id="section-counter" style="background-image: url(images/rj_bg.jpg);" data-stellar-background-ratio="0.5">
