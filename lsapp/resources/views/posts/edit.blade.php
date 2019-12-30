@@ -11,7 +11,7 @@
 		{{Form::textarea('body', $post->body, ['id' => 'article-ckeditor', 'class' => 'form-control', 'placeholder' => 'Corpo'])}}
 	</div>
 	<div class="form-group">
-	<p style="font-weight:bold;">Selecione abaixo a página em que a postagem será realizada. (Deixe em branco para postar como notícia)</p>
+	<p style="font-weight:bold;">Selecione abaixo a página em que a postagem será realizada.</p>
 		 	{{Form::select('tag', array('' => 'Notícias','revista' => 'Revista','doutorado' => 'Doutorado','editais' => 'Editais','alunos' => 'Alunos', 'formularios' => 'Formulários'), 'S')}}
 		<!--{{Form::text('tag','',['class'=>'form-control', 'placeholder' => 'Tag para a postagem'])}}-->
 	</div>

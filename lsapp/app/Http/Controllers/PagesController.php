@@ -12,7 +12,7 @@ class PagesController extends Controller
     public function index(){
         $locale = app()->getLocale();
     	$title = 'home';
-        $posts = Post::orderBy('created_at','desc')->paginate(3);
+        $posts = Post::orderBy('created_at','desc')->where('tag','none')->paginate(3);
         return view('pages.index')->with('posts', $posts)->with('title',$title)->with('locale',$locale);
         //return view('pages.index', compact('title'));
 
@@ -87,8 +87,10 @@ class PagesController extends Controller
     }
 
     public function noticias(){
+        $locale = app()->getLocale();
         $title ='noticias';
-        return view('pages.noticias')->with('title',$title);
+        $posts = Post::orderBy('created_at','desc')->where('tag','none')->get();
+        return view('pages.noticias')->with('posts', $posts)->with('title',$title)->with('locale',$locale);
     }
 
 }
