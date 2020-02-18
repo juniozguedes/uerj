@@ -21,7 +21,8 @@ class PagesController extends Controller
 
     public function programa(){
         $title = 'programa';
-    	return view('pages.programa')->with('title',$title);
+        $posts = Post::where('tag','programa')->get();
+    	return view('pages.programa')->with('title',$title)->with('posts',$posts);
     }
 
 
@@ -33,12 +34,12 @@ class PagesController extends Controller
 
     public function pesquisa(){
         $title ='pesquisa';
-        return view('pages.pesquisa')->with('title',$title);
+        $posts = Post::where('tag','pesquisa')->get();
+        return view('pages.pesquisa')->with('title',$title)->with('posts',$posts);
     }
 
     public function alunos(){
         $title ='alunos';
-
         $posts = Post::where('tag','alunos')->get();
         return view('pages.alunos')->with('title',$title)->with('posts',$posts);
     }
@@ -46,9 +47,7 @@ class PagesController extends Controller
 
     public function formularios(){
         $title ='formularios';
-
         $posts = Post::where('tag','formularios')->get();
-
         return view('pages.formularios')->with('title',$title)->with('posts',$posts);
     }
 
@@ -72,7 +71,8 @@ class PagesController extends Controller
 
     public function capes(){
         $title ='capes';
-        return view('pages.capes')->with('title',$title);
+        $posts = Post::where('tag','capes')->get();
+        return view('pages.capes')->with('title',$title)->with('posts', $posts);
     }
 
     public function contato(){
